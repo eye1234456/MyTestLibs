@@ -6,9 +6,10 @@
 //
 
 #import "HoHomeViewController.h"
+#import <Masonry/Masonry.h>
 
 @interface HoHomeViewController ()
-
+@property(nonatomic, strong) UIImageView *imageView;
 @end
 
 @implementation HoHomeViewController
@@ -16,6 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
+    
+    NSString *helloBundlePath = [[NSBundle bundleForClass:self.class] pathForResource:@"hello" ofType:@"bundle"];
+    NSBundle *helloBoundle = [NSBundle bundleWithPath:helloBundlePath];
+    UIImage *hands = [[UIImage alloc] initWithContentsOfFile:[helloBoundle pathForResource:@"hands" ofType:@"jpeg"]];
+    self.imageView = [[UIImageView alloc] initWithImage:hands];
+    [self.view addSubview:self.imageView];
 }
 
 /*

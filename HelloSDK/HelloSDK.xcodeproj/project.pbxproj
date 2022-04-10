@@ -19,9 +19,9 @@
 		004C94682801F30C0012F9EA /* TestHelloUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 004C94672801F30C0012F9EA /* TestHelloUITestsLaunchTests.m */; };
 		004C94722801F4D10012F9EA /* HelloSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A9C54728003E0B00CBF661 /* HelloSDK.framework */; };
 		004C94732801F4D10012F9EA /* HelloSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A9C54728003E0B00CBF661 /* HelloSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		004C947F2801F6950012F9EA /* HoBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 004C947D2801F6950012F9EA /* HoBaseViewController.h */; };
+		004C947F2801F6950012F9EA /* HoBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 004C947D2801F6950012F9EA /* HoBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		004C94802801F6950012F9EA /* HoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 004C947E2801F6950012F9EA /* HoBaseViewController.m */; };
-		004C94882801F7300012F9EA /* HoHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 004C94852801F7300012F9EA /* HoHomeViewController.h */; };
+		004C94882801F7300012F9EA /* HoHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 004C94852801F7300012F9EA /* HoHomeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		004C94892801F7300012F9EA /* HoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 004C94862801F7300012F9EA /* HoHomeViewController.m */; };
 		004C948A2801F7300012F9EA /* HoHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 004C94872801F7300012F9EA /* HoHomeViewController.xib */; };
 		004C948D2801FA140012F9EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 004C948C2801FA140012F9EA /* Assets.xcassets */; };
