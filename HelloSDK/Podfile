@@ -1,11 +1,36 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '12.0'
+use_frameworks!
+#消除警告
+inhibit_all_warnings!
 
-target 'HelloSDK' do
-  # Comment the next line if you don't want to use dynamic frameworks
-#  use_frameworks!
-   pod "AFNetworking"
-
-  # Pods for HelloSDK
-
+def share_pods
+  pod 'MyLayout'
+  pod 'ReactiveObjC'
+  pod 'AFNetworking'
+  pod 'SDWebImage'
+  pod 'Masonry'
 end
+
+targetArray = ['HelloSDK','TestHello']
+# TestHello对HelloSDK的依赖，使用xcode的target依赖target的方式处理
+# 选择TestHello->General->Frameworks, Libraries, and Embedded Content->+ ->HelloSDK.framwork
+targetArray.each do |t|
+    target t do
+      puts t
+      share_pods
+      if t == "TestHello"
+        pod 'SVGAPlayer'
+      end
+    end
+end
+#target 'HelloSDK' do
+#  # Comment the next line if you don't want to use dynamic frameworks
+#   share_pods
+#end
+#target 'TestHello' do
+#  # Comment the next line if you don't want to use dynamic frameworks
+#   share_pods
+#   pod "SVGAPlayer"
+#
+#end
