@@ -140,11 +140,13 @@ packaging_AAA(){
     echo $#
     echo "================="
     PROJECT_DIR=`pwd`
+    echo ${PROJECT_DIR}
+    echo "================"
     # 默认debug模式
     if [ $# -eq 1 ] ; then
-        packaging "HelloSDK" "AAASDK" $1 
+        packaging "HelloSDK" "AAASDK" $1 "${PROJECT_DIR}"
     else
-        packaging "HelloSDK" "AAASDK" "Debug" ${PROJECT_DIR}
+        packaging "HelloSDK" "AAASDK" "Debug" "${PROJECT_DIR}"
     fi
     
 }
