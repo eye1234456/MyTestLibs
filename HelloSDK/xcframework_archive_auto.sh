@@ -5,7 +5,8 @@ PROJECT_NAME="HelloSDK"
 # scheme名称
 # SCHEME_NAME="HelloSDK"
 SCHEME_NAME="AAASDK"
-Configuration="Debug"
+# Configuration="Debug"
+Configuration="Release"
 # 项目所在的文件
 PROJECT_DIR=`pwd`
 
@@ -120,7 +121,7 @@ create_mix_framework_endTime_s=`date +%s`
 echo "合成framework时长：$[$create_mix_framework_endTime_s - $create_mix_framework_startTime_s]"
 echo '结束合成framework'
 
-# rm -rf "${TEMP_FRAMEWORK_DIR}"
+rm -rf "${TEMP_FRAMEWORK_DIR}"
 total_endTime_s=`date +%s`
 echo '==================end================'
 echo "总共时长：$[$total_endTime_s - $total_startTime_s]"
