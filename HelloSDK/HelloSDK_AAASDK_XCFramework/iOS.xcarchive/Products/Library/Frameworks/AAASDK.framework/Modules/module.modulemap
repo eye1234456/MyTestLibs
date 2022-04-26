@@ -1,0 +1,6 @@
+framework module AAASDK {
+  umbrella header "AAASDK.h"
+
+  export *
+  module * { export * }
+}

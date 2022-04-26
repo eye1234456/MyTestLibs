@@ -12,12 +12,13 @@ def share_pods
   pod 'Masonry'
 end
 
-targetArray = ['HelloSDK','AAASDK','TestHello']
+targetArray = ['HelloSDK', 'AAASDK', 'TestHello']
 # TestHello对HelloSDK的依赖，使用xcode的target依赖target的方式处理
 # 选择TestHello->General->Frameworks, Libraries, and Embedded Content->+ ->HelloSDK.framwork
 targetArray.each do |t|
     target t do
-      puts t # 打印输出
+      # 打印输出
+      puts t
       share_pods
       if t == "TestHello"
         pod 'SVGAPlayer'

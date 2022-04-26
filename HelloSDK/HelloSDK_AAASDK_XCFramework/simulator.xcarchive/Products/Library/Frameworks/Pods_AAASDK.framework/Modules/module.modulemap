@@ -1,0 +1,6 @@
+framework module Pods_AAASDK {
+  umbrella header "Pods-AAASDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

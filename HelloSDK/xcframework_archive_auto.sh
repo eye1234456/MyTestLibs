@@ -17,7 +17,7 @@ TEMP_FRAMEWORK_DIR="${PROJECT_DIR}/${FRAMEWORK_FOLDER_NAME}"
 
 #xcframework path
 # 生成的xcframework
-EXPORT_FOLDER_PATH="${HOME}/Desktop/${FRAMEWORK_FOLDER_NAME}"
+EXPORT_FOLDER_PATH="${HOME}/Desktop/${FRAMEWORK_FOLDER_NAME}/${Configuration}"
 # 生成xcframework的路劲
 EXPORT_XCFRAMEWORK_PATH="${EXPORT_FOLDER_PATH}/${SCHEME_NAME}.xcframework"
 # 生成真机、模拟器二和一的路劲
@@ -29,11 +29,13 @@ SIMULATOR_ARCHIVE_PATH="${TEMP_FRAMEWORK_DIR}/simulator.xcarchive"
 # 生成的真机的库的文件
 IOS_DEVICE_ARCHIVE_PATH="${TEMP_FRAMEWORK_DIR}/iOS.xcarchive"
 # 删除之前生成的xcframework的文件夹
+# 创建临时文件
+rm -rf "${TEMP_FRAMEWORK_DIR}"
+mkdir "${TEMP_FRAMEWORK_DIR}"
+# 创建导出文件地址
 rm -rf "${EXPORT_FOLDER_PATH}"
-echo "Deleted ${FRAMEWORK_FOLDER_NAME}"
-mkdir "${FRAMEWORK_FOLDER_NAME}"
-echo "Created ${FRAMEWORK_FOLDER_NAME}"
-echo "Archiving ${SCHEME_NAME}"
+mkdir "${EXPORT_FOLDER_PATH}"
+
 
 echo '==================start================'
 total_startTime_s=`date +%s`
@@ -118,7 +120,7 @@ create_mix_framework_endTime_s=`date +%s`
 echo "合成framework时长：$[$create_mix_framework_endTime_s - $create_mix_framework_startTime_s]"
 echo '结束合成framework'
 
-rm -rf "${TEMP_FRAMEWORK_DIR}"
+# rm -rf "${TEMP_FRAMEWORK_DIR}"
 total_endTime_s=`date +%s`
 echo '==================end================'
 echo "总共时长：$[$total_endTime_s - $total_startTime_s]"

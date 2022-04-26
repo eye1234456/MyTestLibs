@@ -8,5 +8,13 @@
 #import "AAAConfig.h"
 
 @implementation AAAConfig
-
++ (void)sayHello {
+    #ifdef DEBUG
+            NSLog(@"AAAConfig debug");
+            NSLog(@"domain: %@",URL_DOMAINS);
+    #else
+            NSLog(@"AAAConfig release");
+            NSLog(@"domain: %@",URL_DOMAINS);
+    #endif
+}
 @end
